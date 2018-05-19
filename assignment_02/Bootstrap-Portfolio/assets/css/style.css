@@ -1,0 +1,140 @@
+html {
+    height: 100%;
+    width: 100%;
+    min-height: 100%;
+    background: url('../../assets/images/bg_image.png') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  
+}
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+    color: #777777;
+    background: none;
+
+}
+
+.container {
+    min-height:100%;
+    position:relative;
+ }
+
+h1, h2, h3, h4, h5, h6, .name {
+    font-family: 'Georgia', Times, Times New Roman, serif;
+    color: #4aaaa5;
+}
+p {
+    line-height: 21px;
+    font-size: 14px;
+}
+
+a:link, a:visited, a:active, a:hover {
+    text-decoration: none;
+    color: #777777;
+    font-size: 13px
+}
+
+a:hover, a:active {
+    background: #4aaaa5;
+    color: #ffffff;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+label {font-size: 13px;}
+
+.navigation {
+    width: 75%;
+    margin: 0 auto;
+}
+
+.navbar-nav a {
+    margin: 0 10px;
+}
+
+.p_border {
+    border-left: 1px solid #dddddd;
+    border-right: 1px solid #dddddd;
+    width:103px;
+    text-align: center;
+}
+
+.name {
+    color: #ffffff;
+    background: #4aaaa5;
+    font-size: 22px;
+    padding: 10px 20px;
+}
+
+.content, .portfolio, .contact {
+    width: 73%;
+    margin: 0 auto;
+    background: #ffffff;
+    margin-bottom: 80px;
+}
+
+.about {
+    height: 58px;
+    border-bottom: 2px solid #dddddd;
+    margin-bottom: 30px;
+    font-size: 21px;
+    line-height: 58px;
+}
+
+
+.portfolio img {
+    max-width: 100%;
+}
+
+.p_title { 
+    position: absolute;
+    bottom:0;
+    left: 6%;
+    background: #4aaaa5;
+    color: white;
+    width: 88%;
+    height: 60px;
+    line-height: 60px;
+}
+
+#truck { background: url('../../assets/images/truck.jpg'); }
+#micro { background: url('../../assets/images/micro.jpg'); }
+#projects { background: url('../../assets/images/projects.jpg'); }
+#cms { background: url('../../assets/images/cms.jpg'); }
+
+#user_message {
+    border: 1px solid #dddddd;
+}
+
+.btn-primary {
+    background: #4aaaa5;    box-shadow: none;
+    border: none;
+    margin-bottom: 50px;
+}
+
+
+.footer {
+    width: 100%;
+    height: 68px;
+    background: #666666;
+    border-top: 8px solid #4aaaa5;
+    color: #C2C9C8;
+}
+
+
+.footer p {
+    font-size: 8px;
+    /* line-height: 60px; */
+    margin: 0;
+}
+
