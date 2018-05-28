@@ -116,12 +116,13 @@ var newGame = function playGame() {
   var hex = word.hex;
   document.getElementById("play_again").style.display = "none";
   document.getElementById("count").innerHTML = "You have <span class style=\"color:#EF4F47;\">" + (maxLetters) + "</span> chances to make Ken sing.";
-
+  
 
   document.onkeyup = function(event) {
     var userGuess = event.key;
     var hideLetter = "letter_" + userGuess;
     document.getElementById(hideLetter).style.color = "#262B33";
+    document.getElementById("instruct").style.display = "none";
     if (!/^[a-zA-Z]*$/g.test(userGuess)) {
       document.querySelector(".no-numbers").style.display = "block";
     }

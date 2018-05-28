@@ -92,15 +92,16 @@ body {
     display: none;
 }
 
+#letter_container {
+    background:#262B33;
+}
+
 .letter_choice {
     font-size:1em;
     color:white;
-    background:#262B33;
-    height:1.75rem;
-    width:1.75rem;
-    margin-right:.3125rem;
-    text-align: center;
+    padding: .125rem;
 }
+
 .score{margin-bottom:3em;}
 .score h4 {
     display: inline-block;
@@ -110,9 +111,32 @@ body {
 #ken_score {
     margin-left: 4rem;
 }
+
+#instruct {
+    color:#F9BB57;
+    font-weight: bold;
+    font-size: 4rem;
+}
 #game_over {
     font-size:5em;
     color:white;
 }
 
+.exit {
+    margin-top: 4rem;
+}
 
+
+.about_ken {
+    padding:8rem 0 0 3rem;
+    font-size: 1.25rem;
+    color: white;
+}
+
+.about_ken a {
+    display: block;
+    margin-top: 2rem;
+}
+.about_ken a:hover {
+    text-decoration: none;
+}
