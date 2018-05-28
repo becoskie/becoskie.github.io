@@ -105,7 +105,7 @@ var newGame = function playGame() {
   
   var word = getWordItem(wordsArray);
   var wordItem = word.color_name;
-  console.log(wordItem);
+  // console.log(wordItem);
   showBoxes(wordItem);
   letterBoxes = document.querySelectorAll(".wordBox");
   var happyLetters = [];
@@ -137,13 +137,13 @@ var newGame = function playGame() {
     
     } else {
       bumLetters.push(event.key);
-      document.getElementById("count").innerHTML = "You have " + (maxLetters - bumLetters.length) + " left!"
+      document.getElementById("count").innerHTML = "You have <span class style=\"color:#EF4F47;\">" + (maxLetters - bumLetters.length) + "</span> left!"
     }
     if (bumLetters.length == maxLetters) {
       document.getElementById("count").style.display = "none";
       document.getElementById("instruct").style.display = "none";
       document.getElementById("letter_container").style.display = "none";
-      document.getElementById("game_over").innerHTML = "Oh snap! Ken whuuuped on you.";
+      document.getElementById("game_over").innerHTML = "Oh snap! Ken won.";
       document.getElementById("play_again").style.display = "block";
       document.getElementById("quit").style.display = "block";
       kenScore ++;
@@ -152,7 +152,7 @@ var newGame = function playGame() {
       document.getElementById("count").style.display = "none";
       document.getElementById("letter_container").style.display = "none";
       document.getElementById("instruct").style.display = "none";
-      document.getElementById("game_over").innerHTML = "Yeaaah!! Ken's gunna do a word sing thing.";
+      document.getElementById("game_over").innerHTML = "Yeaaah!! Ken's gunna sing.";
       playerScore ++;
       kenSings.play();
       kenSings.addEventListener("ended", function(){
