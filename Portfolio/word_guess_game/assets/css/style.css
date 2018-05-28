@@ -1,0 +1,143 @@
+html {
+	width: 100%;
+}
+
+body {
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+    font-weight: 300;
+    color: rgb(57, 57, 57);
+    background:#90BBBF;
+}
+
+.container-fluid {
+    padding-right:0;
+    padding-left:0;
+    margin-right:auto;
+    margin-left:auto
+ }
+
+ img {
+     max-width: 100%;
+ }
+
+ .jumbotron {
+    background:#90BBBF;
+    padding: 0;
+ }
+
+ .display-2 {
+    margin-top: 6rem; 
+    font-family: Arial Black, Helvetica, sans-serif;
+     font-size: 4em;
+     line-height: 3rem;
+     color: white;
+ }
+
+ .display-1 {
+    font-weight:bold;
+    font-size: 7em;
+    margin-bottom: 4rem;
+    letter-spacing: -.75rem;
+ }
+
+ .landing {
+     margin: 0;
+     padding: 0;
+ }
+
+ .play_game {
+     opacity: 0;
+     display: none;
+ }
+
+ #count {
+     font-size: 2em;
+     font-weight: bold;
+     color: white;
+ }
+
+ .exit {
+    opacity: 0;
+    display: none;
+}
+
+#touch_input {
+    display: none;
+}
+.word_container {
+    margin-bottom: 2rem;
+}
+ .wordBox {
+	display: inline-block;
+	margin-right: 25px;
+	width: 80px;
+	height: 129px;
+	/* background:#74A7B2; */
+    vertical-align: top;
+    /* box-shadow:1px 1px 2px 2px #6B9AA4;  */
+}
+
+.letter {
+	font-size: 48px;
+	font-weight: bold;
+	color: white;
+	text-align: center;
+	line-height: 129px;
+}
+
+.letter p {
+	margin: 0;
+}
+
+.no-numbers {
+    display: none;
+}
+
+#letter_container {
+    background:#262B33;
+}
+
+.letter_choice {
+    font-size:1em;
+    color:white;
+    padding: .125rem;
+}
+
+.score{margin-bottom:3em;}
+.score h4 {
+    display: inline-block;
+    color:white;
+    font-weight: bold;
+}
+#ken_score {
+    margin-left: 4rem;
+}
+
+#instruct {
+    color:#F9BB57;
+    font-weight: bold;
+    font-size: 4rem;
+}
+#game_over {
+    font-size:5em;
+    color:white;
+}
+
+.exit {
+    margin-top: 4rem;
+}
+
+
+.about_ken {
+    padding:8rem 0 0 3rem;
+    font-size: 1.25rem;
+    color: white;
+}
+
+.about_ken a {
+    display: block;
+    margin-top: 2rem;
+}
+.about_ken a:hover {
+    text-decoration: none;
+}
