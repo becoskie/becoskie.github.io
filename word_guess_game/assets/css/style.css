@@ -35,8 +35,9 @@ body {
 
  .display-1 {
     font-weight:bold;
-    font-size: 8em;
+    font-size: 7em;
     margin-bottom: 4rem;
+    letter-spacing: -.125rem;
  }
 
  .landing {
