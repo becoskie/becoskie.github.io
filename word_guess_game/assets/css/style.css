@@ -136,7 +136,7 @@ body {
 
 .about_ken a {
     display: block;
-    margin-top: 2rem;
+    margin: 2rem 0 2rem 0;
 }
 .about_ken a:hover {
     text-decoration: none;
