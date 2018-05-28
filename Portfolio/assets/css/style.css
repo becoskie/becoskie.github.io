@@ -47,6 +47,11 @@ a:hover {
     padding: 2px 5px;
 }
 
+.port_link a:hover {
+    background: #287e79;
+    padding: 0;
+}
+
 input:focus,
 select:focus,
 textarea:focus,
@@ -142,6 +147,18 @@ img { max-width: 100%;}
     font-size: 1.4375rem;;
     cursor: pointer;
 } 
+
+.port_link a {
+    position: absolute;
+    width: 100%;
+    left: 0px;
+    background: #4aaaa5;
+    color: #ffffff;
+    text-align: center;
+    font-family: 'Georgia', Times, Times New Roman, serif;
+    font-size: 1.4375rem;;
+    cursor: pointer;
+}
 
 
 /* start footer */
@@ -239,7 +256,15 @@ footer {
         left: 0px;
         line-height: 3.75rem;
 
-    } 
+    }
+    
+    .port_link a {
+        position: absolute;
+        height: 3.75rem;
+        top: 75%;
+        left: 0px;
+        line-height: 3.75rem;
+    }
 
     #about h2, form h2, #portfolio h2 {
         font-size: 1.5rem;
@@ -311,6 +336,14 @@ footer {
     #truck, #projects {float: right;}
 
     .port_link p {
+        position: absolute;
+        height: 3.9375rem;
+        top: 70%;
+        left: 0px;
+        line-height: 3.9375rem;
+    }
+
+    .port_link a {
         position: absolute;
         height: 3.9375rem;
         top: 70%;
@@ -412,6 +445,15 @@ footer {
         line-height: 3.4375rem;
     }
 
+    .port_link a {
+        position: absolute;
+        height: 3.4375rem;
+        top: 66%;
+        left: 0px;
+        font-size: 1rem;
+        line-height: 3.4375rem;
+    }
+
     #contact label {
         font-size: .9375rem;
         margin-bottom: .6875rem;
@@ -498,6 +540,15 @@ footer {
     #truck, #projects {float: right;}
 
     .port_link p {
+        position: absolute;
+        height: 3.4375rem;
+        top: 66%;
+        left: 0px;
+        font-size: 1rem;
+        line-height: 3.4375rem;
+    }
+
+    .port_link a {
         position: absolute;
         height: 3.4375rem;
         top: 66%;
