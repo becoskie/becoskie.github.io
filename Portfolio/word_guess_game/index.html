@@ -1,0 +1,105 @@
+<!-- Learn front-end development at rocket speed! http://inarocket.com -->
+
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  <script type="text/javascript" src="assets/javascript/data.json"></script>
+  <title>Colors Testing</title>
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container-fluid landing">
+        <div class="row">
+          <div class="col-sm-6">
+            <img src="assets/images/image_01.jpeg" alt="man with megaphone">
+          </div>
+          <div class="col-sm-6">
+            <h1 class="display-2">Ken Nordine's</h1>
+            <h2 class="display-1">
+              <span style="color:#D22A3B;">C</span>
+              <span style="color:#F0F2EF;">O</span>
+              <span style="color:#153857;">L</span>
+              <span style="color:#F6D043;">O</span>
+              <span style="color:#219492;">R</span>
+              <span style="color:#F0F2EF;">S</span>
+              <span style="color:#383838;">!</span>
+            </h2>
+            <button type="button" class="btn btn-info btn-lg" id="play">Play</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container play_game">
+      <div class="row">
+        <div class="col-10">
+          <div class="col-12 score">
+            <h4 id="player_score"></h4>
+            <h4 id="ken_score"></h4>
+          </div>
+          <div class="col-12">
+            <p id="count"></p>
+            <p id="game_over"></p>
+          </div>
+          <div class="col-12 word_container"></div>
+        </div>
+        <!-- end col-10 -->
+        <div class="col-2">
+          <div class="col-12" id="letter_container"></div>
+        </div>
+        <!-- end col-2 -->
+        <div class="alert alert-info alert-dismissible no-numbers">
+          <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+          <strong>Damn!!</strong> No numbers or such, Ken plays hardcore, no effen around!
+        </div>
+        <h4 id="instruct">use keyboard to enter letters.</h4>
+        <input type="text" id="touch_input" name="letter">
+        <div class="btn-toolbar">
+          <button type="button" class="btn btn-info mr-2" type="submit" id="play_again">Play again</button>
+          <button type="button" class="btn btn-warning text-white" type="submit" id="quit">No, I'm done</button>
+        </div>
+      </div>
+      <!-- end row -->
+    </div>
+    <!-- end play game -->
+    <div class=" container exit">
+      <div>
+        <h1 id="all_done"></h1>
+      </div>
+      <div class="row">
+        <div class="col-sm-6">
+          <img src="assets/images/ken.jpg" alt="Ken Nordine">
+        </div>
+        <div class="col-sm-6 about_ken">
+          Colors is a "word jazz" album by voice-over and recording artist Ken Nordine. It was commissioned by the Fuller Paint Company
+          to write radio advertisement spots.
+          <a href="https://itunes.apple.com/ca/album/colors/526618816" target="_blank">Colors on itunes</a>
+        </div>
+      </div>
+    </div>
+    <!-- end exit -->
+
+  </div>
+  <!-- end container -->
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <script src="assets/javascript/game.js"></script>
+</body>
+
+</html>
