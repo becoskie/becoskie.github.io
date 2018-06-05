@@ -1,0 +1,104 @@
+html {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    background: url('../../assets/images/x_wing.jpg') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+body {
+    font-family: "Lucida Console", Monaco, monospace;
+}
+
+p {
+    font-size: 1.25em; 
+}
+
+img {
+    max-width: 100%;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.wrapper {
+    width:98%;
+    margin: 0 auto;
+}
+
+.heading {
+    width: 100%;
+    height: 2rem;
+    line-height: 2em;
+
+}
+.heading h1 {
+    text-align: right;
+    font-size: 2em;
+}
+.img_contain {
+    width:80%;
+}
+
+.img_box, .enemy_box, .defend_box {
+    width: 20%;
+    height: 9rem;
+    display:inline-block;
+    float: left;
+    background: white;
+    position: relative;
+    border: 5px solid green;
+    cursor: pointer;
+}
+
+.img_box img, .enemy_box img, .defend_box img {
+    width: 85%;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
+.player_character{
+    height: 2.25rem;
+    width: 100%;
+}
+
+.enemy_box {
+    background: red;
+    border-color: black;
+}
+.defend_box {
+    background: black;
+    border-color: green;
+    color: #fefefe;
+}
+
+.cast_name {
+    position: absolute;
+    top: 7%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    font-size: .9em;
+}
+.health_stat {
+    position: absolute;
+    bottom: -3%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    font-size: .9em;
+}
+.status {
+    width: 100%;
+    clear: both;
+    font-size:.75em;
+}
