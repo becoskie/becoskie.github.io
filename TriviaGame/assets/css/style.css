@@ -1,0 +1,102 @@
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background: #e74c3c;
+    color: #ecf0f1;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+    font-weight: 300;
+}
+
+img {
+    max-width: 100%;
+}
+ 
+.content {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+#catching, #timer {
+    font-family: "Arial Black", "Arial Bold", sans-serif;
+    font-size: 5em;
+    letter-spacing: -.06em;
+    margin-bottom: 2rem;
+}
+
+.play_btn {
+    background: #35516d ;
+    padding: 0 1em;
+    height: 3rem;
+    cursor: pointer;
+}
+.play_btn p {
+    line-height: 3em;
+    font-weight: bold;
+}
+.play_btn:hover {
+    background: #2c3e50;
+}
+
+#timer{margin-right: .5rem;}
+
+.time_left p {
+    display: inline;
+}
+
+.answers p {
+    width: 50%;
+    margin: 0 auto .5em auto;
+    background: #2980b9;
+    height: 3rem;
+    cursor: pointer;
+    line-height: 3em;
+    font-weight: bold;
+}
+
+.answers p:hover {background: #2071a7;}
+
+
+.reply {
+    position: relative;
+    text-align: center;
+    margin-top: 10rem;
+}
+.state {
+    position: relative;
+}
+
+img.state{
+    max-width: 70%;
+    z-index: -5;
+}
+
+#reply_txt {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.5em;
+    z-index: 1;
+}
+#img_text {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 4em;
+    font-weight: bold;
+    color: #c7ecee;
+    /* opacity: .7; */
+}
+
+#play_again {
+    width: 30%;
+    margin: 2rem auto;
+}
+
+.final_score {
+    margin-top: 5rem;
+}
