@@ -74,6 +74,7 @@ function gameBlock() {
 }
 
 function getTriva() {
+    
     var arr = []
     while(arr.length < 4){
         var randomnumber = Math.floor(Math.random()*trivia.length);

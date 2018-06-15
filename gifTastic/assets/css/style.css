@@ -1,0 +1,48 @@
+img {
+    max-width: 100%;
+}
+
+
+#topic-display {
+    position: relative;
+}
+.giphContain {
+    position: relative;
+    display: inline-block;
+}
+
+.view_layer {
+    position: relative;
+    top: 0;
+    left:0;
+    cursor: pointer;
+}
+
+.hide_layer {
+    position: absolute;
+    top: 0;
+    left:0;
+    z-index: -1;
+}
+
+
+
+  /*  display: inline-block;
+    float: left;
+    width: 200px;
+}
+
+
+.view_layer {
+    position: absolute;
+    top: 0;
+    left:0;
+    z-index: 1;
+}
+
+.hide_layer {
+    position: absolute;
+    top: 0;
+    left:0;
+    z-index: -999;
+} */
