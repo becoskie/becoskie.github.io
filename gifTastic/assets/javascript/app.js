@@ -1,4 +1,6 @@
-var topics = ['unicorns', 'nuns', 'turtles', 'spaceship', 'racoons', 'yarn'];
+var topics = ['unicorns', 'nuns', 'turtles', 'spaceship', 'racoons', 'yarn', 'yosemite sam', 'bill and ted'];
+$('a[class=down_load]').hide();
+
 
 
 createBtns();
@@ -18,7 +20,7 @@ $("#topic-add").on("click", function(event) {
         var state = $(this).attr("class");        
         if(state === "view_layer") {
             $(this).removeClass('view_layer').addClass('hide_layer');
-            var next = $( this ).siblings().removeClass('hide_layer').addClass('view_layer');
+            $( this ).siblings().removeClass('hide_layer').addClass('view_layer');
         }
         })
 
@@ -28,7 +30,7 @@ function createBtns() {
 
     for (var i = 0; i < topics.length; i++) {
 
-      var a = $("<button>");
+      var a = $('<button type="button" class="btn btn-outline-secondary mr-2">');
       a.addClass("topic");
       a.attr("data-name", topics[i]);
       a.text(topics[i]);
@@ -52,8 +54,15 @@ function createBtns() {
         var playUrl = response.data[i].images.fixed_height.url;
         var pausedGiph = $("<img>").attr({class: "view_layer", id:"paused_" + i, src:stillURL});
         var playGiph = $("<img>").attr({class: "hide_layer", id:"play_" + i, src:playUrl});
+        var giphTitleBox = $('<p class="giph_title">');
+        var giphTitle = response.data[i].title;
+        var giphDownload = $(`<a href="${playUrl}" target="blank" class="down_load"><img src="assets/images/download.svg"></a>`)
+        giphTitleBox.text(giphTitle);
+        console.log(giphTitle);
         $(giphDiv).append(pausedGiph);
         $(giphDiv).append(playGiph);
+        $(giphDiv).append(giphTitleBox);
+        $(giphTitleBox).append(giphDownload);
         $("#topic-display").append(giphDiv);
       }
       createBtns();
