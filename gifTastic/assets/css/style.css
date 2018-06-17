@@ -19,7 +19,7 @@ body {
     font-weight: bold;
     font-size: 3em;
     letter-spacing: -.06rem;
-    
+    margin-top:3rem;
 }
 .btn-toolbar {margin-bottom: 1.5rem;}
 
@@ -40,9 +40,17 @@ img {
     display: inline-block;
     margin-right: 1rem;
 }
-.giph_title {
+.giph_title, .giph_rating {
     color: white;
     font-weight: bold;
+    line-height: .5rem;
+}
+.giph_title {
+    margin-bottom: 0;
+}
+
+.giph_rating {
+    margin-bottom: 3rem;
 }
 
 .down_load {
@@ -56,6 +64,7 @@ img {
     top: 0;
     left:0;
     cursor: pointer;
+    z-index: 1;
 }
 
 .hide_layer {

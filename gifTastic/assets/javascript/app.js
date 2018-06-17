@@ -1,7 +1,4 @@
 var topics = ['unicorns', 'nuns', 'turtles', 'spaceship', 'racoons', 'yarn', 'yosemite sam', 'bill and ted'];
-$('a[class=down_load]').hide();
-
-
 
 createBtns();
     
@@ -38,11 +35,10 @@ function createBtns() {
     }
   }
 
-
   function displayTopic() {
     $("#topic-display").empty();
     var topic = $(this).attr("data-name");
-    var queryURL = `http://api.giphy.com/v1/gifs/search?q=${topic}&api_key=dc6zaTOxFJmzC`;
+    var queryURL = `https://api.giphy.com/v1/gifs/search?q=${topic}&api_key=dc6zaTOxFJmzC`;
 
     $.ajax({
       url: queryURL,
@@ -55,13 +51,17 @@ function createBtns() {
         var pausedGiph = $("<img>").attr({class: "view_layer", id:"paused_" + i, src:stillURL});
         var playGiph = $("<img>").attr({class: "hide_layer", id:"play_" + i, src:playUrl});
         var giphTitleBox = $('<p class="giph_title">');
+        var giphRatingBox = $('<p class="giph_rating">');
         var giphTitle = response.data[i].title;
+        var giphRating = "Rating: " + response.data[i].rating;
+        console.log(giphRating);
         var giphDownload = $(`<a href="${playUrl}" target="blank" class="down_load"><img src="assets/images/download.svg"></a>`)
         giphTitleBox.text(giphTitle);
-        console.log(giphTitle);
+        giphRatingBox.text(giphRating);
         $(giphDiv).append(pausedGiph);
         $(giphDiv).append(playGiph);
         $(giphDiv).append(giphTitleBox);
+        $(giphDiv).append(giphRatingBox);
         $(giphTitleBox).append(giphDownload);
         $("#topic-display").append(giphDiv);
       }
