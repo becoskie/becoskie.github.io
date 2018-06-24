@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <script src="https://www.gstatic.com/firebasejs/5.1.0/firebase.js"></script>
+    <div class="container-fluid">
+            <form id="name_form">
+                <div class="form-group">
+                    <label for="playerName">Name</label>
+                    <input type="name" class="form-control" id="playerName" placeholder="Enter name">
+                </div>
+                <button type="submit" class="btn btn-primary" id="submitBtn">Submit</button>
+            </form>
+            <div class="modal fade" id="myModal" role="dialog">
+                    <div class="modal-dialog">
+                    
+                        <!-- Modal content-->
+                        <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title">did you forget your name?</h4>
+                        </div>
+                        <div class="modal-body">
+                            <p id="error"></p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                
+            </div>
+            </div>
+
+            <div class="row" id="game_info">
+                <div class="container col-12" id="session_name"></div>
+            </div>
+
+            <div class="row" id="game_contain">
+                <div class="container col-12 game-data">
+                    <p id="player_one"></p>
+                    <p id="player_two"></p>
+                </div>
+                <div class="container col-12 game-buttons">
+                    <button value="rock" class="btn btn-primary">rock</button>
+                    <button value="paper" class="btn btn-primary">paper</button>
+                    <button value="scissors" class="btn btn-primary">scissors</button>
+                </div>
+                <div class="container col-12 play_again">
+                    <button value="play" id="play_more" class="btn btn-primary">play again</button>
+                </div>
+            </div>
+
+            <div class="row" id="chat_box">
+                <div class="container col-12">
+                    <div class="form-group">
+                        <label for="exampleFormControlTextarea1">Message</label>
+                        <textarea class="form-control" id="message_text" rows="5"></textarea>
+                        <button value="send" id="send_message" class="btn btn-primary">send</button>
+                      </div>
+                </div>
+            </div>
+
+    </div> <!-- end fluid container -->
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+    <script src="assets/javascript/app.js"></script>
+  </body>
+</html>
