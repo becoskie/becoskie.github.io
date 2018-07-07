@@ -89,18 +89,24 @@ br {
 
 .contact_link {
     max-width:3.125rem;
+    cursor: pointer;
 }
-#git_link, #lden_link, #mail_link {cursor: pointer;}
 
-#git_link .st0, #lden_link .st0, #mail_link .st0 {
+#git_link .st0, #git_project_link .st0, #lden_link .st0, #mail_link .st0 {
     fill:#2f3542;
 }
 
-#git_link .st1, #lden_link .st1, #mail_link .st1 {
+#git_link .st1, #git_project_link .st1, #lden_link .st1, #mail_link .st1 {
     fill: none;
     stroke: #2f3542;
     stroke-width: 3;
     stroke-miterlimit: 10;
+}
+
+#git_project_link {
+    vertical-align: middle;
+    max-width:2.5rem;
+    margin-right:.25em;
 }
 
 #worker {
@@ -184,7 +190,8 @@ br {
   }
 
   .btn-round:hover {
-      background:#cad1d8;
+      background:#2f3542;
+      color: #ffffff;
   }
   .btn-center {
     text-align: center;
