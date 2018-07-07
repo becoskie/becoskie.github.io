@@ -1,0 +1,256 @@
+html {
+    background:#ffffff;
+}
+
+body {
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+    font-weight: 300;
+    /* color: #2F343F; */
+    color: #2f3542;
+ }
+#main {background:#ffffff;}
+
+#launch {
+    position: absolute;
+    background:#ffffff;
+    top:0;
+    left:0;
+    display:none;
+    max-width: 100%;
+}
+#launch_heading {
+    margin-bottom: 0;
+}
+#long_launch {
+    margin-bottom:5rem;
+}
+
+br {
+    content: "";
+    margin: .5em;
+    display: block;
+    font-size: 12%;
+  }
+#build_head {
+    font-weight: bold;
+    margin-bottom: .5rem;
+}
+.build_item {
+    margin-bottom: 0;
+    line-height: 1.25rem;
+}
+
+.jumbotron {
+    position: relative;
+    background: #ffffff;
+    padding-bottom: 0;
+}
+#launch_img {
+    max-width: 100%;
+}
+
+ .brand {
+    position: fixed;
+}
+
+ .brand img {
+    max-width: 60%;
+}
+/* project form */
+/* ----------------------------------------------------------------------- */
+.login {
+    width: 40%;
+}
+.hide {display: none;}
+
+.project_form {
+    width: 60%;
+}
+
+.proj_control {
+    display: inline-block;
+    width: 3.5rem;
+    text-align: center;
+    background:#fa983a;
+    padding-top: 0;
+    cursor: pointer;
+    margin-right: 1rem;
+}
+.proj_control:hover {
+    background:#f18826;
+}
+.proj_title {
+    margin: 1rem 0;
+    font-weight: bold;
+    padding-bottom: 0;
+}
+/* end project form */
+/* ----------------------------------------------------------------------- */
+
+.contact_link {
+    max-width:3.125rem;
+}
+#git_link, #lden_link, #mail_link {cursor: pointer;}
+
+#git_link .st0, #lden_link .st0, #mail_link .st0 {
+    fill:#2f3542;
+}
+
+#git_link .st1, #lden_link .st1, #mail_link .st1 {
+    fill: none;
+    stroke: #2f3542;
+    stroke-width: 3;
+    stroke-miterlimit: 10;
+}
+
+#worker {
+    position: absolute;
+    font-weight: bold;
+    font-size: 1.85em;
+    letter-spacing: -.0625rem;
+    margin: 0;
+    padding: 0;
+}
+
+#seasoned {
+    position: absolute;
+    font-size: 1.45em;
+    margin: 0;
+    padding: 0;
+}
+
+.info_contain {
+    background: #ffffff;
+}
+
+.intro { margin-bottom: 8em;}
+
+#name {
+    font-weight: bold;
+    letter-spacing: -.0625rem;
+    font-size: 2em;
+    color: #747d8c;
+}
+
+.projects h2 {
+ /* font-weight: bold; */
+ font-size: 1.5rem;
+ color: #2f3542;
+ text-transform: lowercase;
+}
+#bolden {
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: -.0625rem;
+}
+.divider {
+    margin: .5rem auto 3rem auto;
+    width: 80%;
+    border-bottom: 2px solid #cad1d8;
+}
+
+.card {
+    border-radius: 4px;
+    /* box-shadow: 0 1px 4px rgba(0, 0, 0, 0.23); */
+    /* background-color: #222f3e; */
+    margin-bottom: 20px;
+    position: relative;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid #2f3542;
+  }
+  .card.card-just-text .content {
+    padding: 0px 25px;
+    text-align: center;
+  }
+
+  .card .icon {
+    display: block;
+    width: 50%;
+    margin: 1rem auto;
+    text-align: center;
+  }
+  
+  .btn-round {
+    border: 1px solid #2f3542;
+    border-radius: 30px !important;
+    padding: 6px 20px;
+    /* color:white; */
+    background: none;
+  }
+  .btn-round:focus, .btn-round:active{
+    box-shadow:none;
+  }
+
+  .btn-round:hover {
+      background:#cad1d8;
+  }
+  .btn-center {
+    text-align: center;
+  }
+  
+@media(min-width:576px){
+    
+    .brand img {
+        max-width: 95%;
+    }
+    
+    .info_contain {
+        background: blue;
+        position: absolute;
+        top:0;
+        right: 0;
+    }
+    
+}
+
+@media(min-width:768px){
+    .brand img {
+        max-width: 90%;
+        margin-left: 2%;
+    }
+    
+    #worker {
+        font-size: 2.25em;
+    }
+    #seasoned {
+        font-size: 1.5em;
+    }
+    
+    .info_contain {
+        background: green;
+    }
+}
+
+@media(min-width:992px){
+    .brand img {
+        max-width: 80%;
+        margin-left: 2%;
+    }
+    
+    .info_contain {
+        background: yellow;
+    }
+
+}
+
+@media(min-width:1200px){
+    .brand img {
+        max-width: 70%;
+        margin-left: 2%;
+    }
+    
+    #worker { 
+        font-size: 2.5em;
+    }
+    #seasoned {
+        font-size: 1.75em;
+    }
+    
+    .info_contain {
+        background: pink;
+    }
+    
+
+}
