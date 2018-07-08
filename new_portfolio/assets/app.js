@@ -178,6 +178,7 @@ function popCardData() {
                 var title = childSnapshot.val().projTitle;
                 var svg = childSnapshot.val().svgLink;
                 var sDesc = childSnapshot.val().shortDesc;
+                var dataLink = childSnapshot.val().dataLink;
                 var dataKey = childSnapshot.key;
                 var card = $('<div class="card card-just-text mb-5">');
                 var header = $('<div class="header">');
@@ -190,6 +191,7 @@ function popCardData() {
                 var button = $('<button class="btn btn-round page_link mb-2">');
                 icon.prepend(image);
                 header.prepend(icon);
+                card.attr('id', dataLink);
                 card.prepend(header);
                 titleh4.text(title);
                 desc.text(sDesc);
@@ -214,6 +216,7 @@ function limitToKey(keySent) {
                 $("#launch_heading").text(snapshot.val().projTitle);
                 $("#launch_short").text(snapshot.val().shortDesc);
                 $("#long_launch").html(snapshot.val().longDesc.replace(/.(?=[A-Z])/g, '<br />'));
+                $("#exit_btn").attr('data-target', snapshot.val().dataLink)
                 var build = snapshot.val().buildItems.split(',');
                 var buildContain = $("#build_contain");
                 build.forEach( function(item) {
@@ -221,11 +224,14 @@ function limitToKey(keySent) {
                     buildItem.text(item);
                     buildContain.append(buildItem);
                   });
-                console.log(snapshot.val().longDesc);
             });
         window.scrollTo(0, 0);
-        $("#main").fadeOut(500);
-        $("#launch").delay(500).fadeIn(500);
+        $("#main").fadeOut(300);
+        $("#launch").delay(300).fadeIn(300);
     }
 
 }
+//need to launch
+// $('a#link_id').click(function() {
+//     $(this).attr('target', '_blank');
+// });

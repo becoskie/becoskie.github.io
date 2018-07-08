@@ -10,6 +10,147 @@ body {
  }
 #main {background:#ffffff;}
 
+.brand {
+    position: fixed;
+}
+
+.brand img {
+    max-width: 60%;
+}
+
+#worker {
+    position: absolute;
+    font-weight: bold;
+    font-size: 1.85em;
+    letter-spacing: -.0625rem;
+    margin: 0;
+    padding: 0;
+}
+
+#seasoned {
+    position: absolute;
+    font-size: 1.45em;
+    margin: 0;
+    padding: 0;
+}
+
+.info_contain {
+    background: #ffffff;
+}
+
+.intro { margin-bottom: 8em;}
+
+#name {
+    font-weight: bold;
+    letter-spacing: -.0625rem;
+    font-size: 2em;
+    color: #ff5e57;
+    margin-top:1rem;
+}
+
+.projects h2 {
+/* font-weight: bold; */
+    font-size: 1.5rem;
+    color: #2f3542;
+    text-transform: lowercase;
+}
+#bolden {
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: -.0625rem;
+}
+.divider {
+    margin: .5rem auto 3rem auto;
+    width: 80%;
+    border-bottom: 2px solid #cad1d8;
+}
+.card {
+    /* border-radius: 4px; */
+    /* box-shadow: 0 1px 4px rgba(0, 0, 0, 0.23); */
+    /* background-color: #222f3e; */
+    margin-bottom: 20px;
+    position: relative;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    /* border: 1px solid #2f3542; */
+    border:none;
+  }
+  .card.card-just-text .content {
+    padding: 0px 25px;
+    text-align: center;
+  }
+
+  .card .icon {
+    display: block;
+    width: 70%;
+    margin: 1rem auto;
+    text-align: center;
+  }
+  
+  .btn-round {
+    border: 1px solid #2f3542;
+    border-radius: 30px !important;
+    padding: 6px 20px;
+    /* color:white; */
+    background: none;
+  }
+  .btn-round:focus, .btn-round:active{
+    box-shadow:none;
+  }
+
+  .btn-round:hover {
+      background:#2f3542;
+      color: #ffffff;
+  }
+  .btn-center {
+    text-align: center;
+  }
+/* contact */
+/* --------------------------------------------------------------- */
+.contact_container {
+    display: none;
+    margin: 0 auto 5em auto;
+    width: 80%;
+}
+
+#contact_p {
+    text-align: center;
+    font-size: 1.125em;
+}
+
+.contact_link {
+    max-width:3.125rem;
+    cursor: pointer;
+}
+.contact_link:nth-of-type(2) {
+    margin-left:1em;
+    margin-right: 1em;
+}
+
+#git_link .st0, #git_project_link .st0, #lden_link .st0, #mail_link .st0 {
+    fill:#2f3542;
+}
+
+#git_link .st1, #git_project_link .st1, #lden_link .st1, #mail_link .st1 {
+    fill: none;
+    stroke: #2f3542;
+    stroke-width: 4;
+    stroke-miterlimit: 10;
+}
+
+#git_project_link {
+    vertical-align: middle;
+    max-width:2.5rem;
+    margin-right:.25em;
+}
+
+#git_project_link .st1 {stroke-width: 6;}
+/* end contact */
+/* --------------------------------------------------------------- */
+
+/* launch page */
+/* --------------------------------------------------------------- */
 #launch {
     position: absolute;
     background:#ffffff;
@@ -40,6 +181,10 @@ br {
     line-height: 1.25rem;
 }
 
+#build_contain p:last-child {
+    margin-bottom:2em;
+}
+
 .jumbotron {
     position: relative;
     background: #ffffff;
@@ -48,14 +193,8 @@ br {
 #launch_img {
     max-width: 100%;
 }
-
- .brand {
-    position: fixed;
-}
-
- .brand img {
-    max-width: 60%;
-}
+/* end launch page */
+/* --------------------------------------------------------------- */
 /* project form */
 /* ----------------------------------------------------------------------- */
 .login {
@@ -87,116 +226,9 @@ br {
 /* end project form */
 /* ----------------------------------------------------------------------- */
 
-.contact_link {
-    max-width:3.125rem;
-    cursor: pointer;
-}
 
-#git_link .st0, #git_project_link .st0, #lden_link .st0, #mail_link .st0 {
-    fill:#2f3542;
-}
-
-#git_link .st1, #git_project_link .st1, #lden_link .st1, #mail_link .st1 {
-    fill: none;
-    stroke: #2f3542;
-    stroke-width: 3;
-    stroke-miterlimit: 10;
-}
-
-#git_project_link {
-    vertical-align: middle;
-    max-width:2.5rem;
-    margin-right:.25em;
-}
-
-#worker {
-    position: absolute;
-    font-weight: bold;
-    font-size: 1.85em;
-    letter-spacing: -.0625rem;
-    margin: 0;
-    padding: 0;
-}
-
-#seasoned {
-    position: absolute;
-    font-size: 1.45em;
-    margin: 0;
-    padding: 0;
-}
-
-.info_contain {
-    background: #ffffff;
-}
-
-.intro { margin-bottom: 8em;}
-
-#name {
-    font-weight: bold;
-    letter-spacing: -.0625rem;
-    font-size: 2em;
-    color: #747d8c;
-}
-
-.projects h2 {
- /* font-weight: bold; */
- font-size: 1.5rem;
- color: #2f3542;
- text-transform: lowercase;
-}
-#bolden {
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: -.0625rem;
-}
-.divider {
-    margin: .5rem auto 3rem auto;
-    width: 80%;
-    border-bottom: 2px solid #cad1d8;
-}
-
-.card {
-    border-radius: 4px;
-    /* box-shadow: 0 1px 4px rgba(0, 0, 0, 0.23); */
-    /* background-color: #222f3e; */
-    margin-bottom: 20px;
-    position: relative;
-    max-width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-    border: 1px solid #2f3542;
-  }
-  .card.card-just-text .content {
-    padding: 0px 25px;
-    text-align: center;
-  }
-
-  .card .icon {
-    display: block;
-    width: 50%;
-    margin: 1rem auto;
-    text-align: center;
-  }
-  
-  .btn-round {
-    border: 1px solid #2f3542;
-    border-radius: 30px !important;
-    padding: 6px 20px;
-    /* color:white; */
-    background: none;
-  }
-  .btn-round:focus, .btn-round:active{
-    box-shadow:none;
-  }
-
-  .btn-round:hover {
-      background:#2f3542;
-      color: #ffffff;
-  }
-  .btn-center {
-    text-align: center;
-  }
-  
+  /* media queries */
+  /* ----------------------------------------------------------------------- */
 @media(min-width:576px){
     
     .brand img {
@@ -204,15 +236,39 @@ br {
     }
     
     .info_contain {
-        background: blue;
         position: absolute;
         top:0;
         right: 0;
+        /* background: blue; */
     }
+
+    .card .icon {
+        width: 70%;
+      }
+
+    .contact_container {
+        display: none;
+        position: fixed;
+        margin: 0;
+    }
+
+    #contact_p {
+        font-size: .925em;
+        margin-bottom:3em;
+    }
+
+    .contact_link {
+        max-width:3.125rem;
+    }
+    
     
 }
 
 @media(min-width:768px){
+    /* .info_contain {
+        background: green;
+    } */
+    
     .brand img {
         max-width: 90%;
         margin-left: 2%;
@@ -224,10 +280,10 @@ br {
     #seasoned {
         font-size: 1.5em;
     }
+    .card .icon {
+        width: 65%;
+      }
     
-    .info_contain {
-        background: green;
-    }
 }
 
 @media(min-width:992px){
@@ -236,8 +292,18 @@ br {
         margin-left: 2%;
     }
     
-    .info_contain {
+    /* .info_contain {
         background: yellow;
+    } */
+
+    #contact_p {
+        font-size: 1em;
+        margin-bottom:1.5rem;
+    }
+
+    #blurb {
+        width: 60%;
+        margin: 0 auto;
     }
 
 }
@@ -255,8 +321,13 @@ br {
         font-size: 1.75em;
     }
     
-    .info_contain {
+    /* .info_contain {
         background: pink;
+    } */
+
+    #contact_p {
+        font-size: 1em;
+        margin-bottom:1.5rem;
     }
     
 

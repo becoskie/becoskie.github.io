@@ -5,17 +5,21 @@ $(document).ready(function () {
     brandPos();
     launchSize();
     $(document).scroll(function () {
-        var distance = $(document).scrollTop();
-        if (distance > 50) {
-            console.log("were over");
-        } else {
-            console.log("were under");
+        var dist = $(document).scrollTop();
+        if (dist > 200) {
+            $(".brand").fadeOut(300);
+            $(".contact_container").fadeIn(100);
+        } else if (dist < 200) {
+            $(".contact_container").fadeOut(300);
+            $(".brand").fadeIn(300);
         }
-    })
+    });
+
     window.onresize = function (event) {
         brandPos();
         launchSize();
     };
+
     $("#greeting").text(greeting());
     $(".contact_link").mouseover(function () {
         var linkOut = "#" + $(this).attr("id") + " .st0";
@@ -30,24 +34,46 @@ $(document).ready(function () {
         $(linkOut).css("fill", "#262B33");
     });
 
-    $(document).on('click', ".page_link", function() {
+    $(document).on('click', ".page_link", function () {
+        $(".build_item").empty();
         limitToKey($(this).attr('data-link'));
     });
 
-    $("#exit_btn").click(function(e){
+    $("#exit_btn").click(function (e) {
         e.preventDefault();
-        $("#launch").fadeOut(300);
-        $("#main").delay(300).fadeIn(300, function(){
-            window.scrollBy({ 
-                top: 1000, // could be negative value
-                left: 0, 
-                behavior: 'smooth' 
-              });
+        var anchor = $(this).attr('data-target');
+        $("#launch").fadeOut(300, function () {
+            document.querySelector('#' + anchor).scrollIntoView({
+                behavior: 'smooth'
+            });
         });
-        
+        $("#main").delay(300).fadeIn(300);
+    });
+
+    $(".contact_link").click(function (e) {
+        e.preventDefault();
+        var link = $(this).attr('id');
+        switch (link) {
+            case 'git_link':
+            window.open('https://github.com/becoskie','_blank');
+            break;
+            case 'lden_link':
+            window.open('https://www.linkedin.com/in/rbecoskie/','_blank');
+            break;
+            case 'mail_link':
+            window.location.href = "mailto:ray@becoskie.com";
+            break;
+            
+            
+        }
     });
 
 });
+
+//need to launch
+// $('a#link_id').click(function() {
+//     $(this).attr('target', '_blank');
+// });
 
 function brandPos() {
     var imgWidth = Math.round($(".brand img").width());
@@ -88,6 +114,7 @@ function small(imgHeight, workerHeight, windowHeight) {
     $("#worker").css({ 'top': medHeight + "px", 'left': leftMargin + "px" });
     $("#seasoned").css({ 'top': (medHeight + workerHeight) - 5 + "px", 'left': leftMargin + "px" });
     $(".info_contain").css({ 'margin-top': windowHeight + "px" });
+    $(".contact_container").css({ 'top': 100 + "px", 'left': 50 + "px", 'width': 200 + "px" });
     //blue
 }
 
@@ -100,6 +127,7 @@ function medium(imgHeight, workerHeight, windowHeight) {
     $("#worker").css({ 'top': medHeight + "px", 'left': leftMargin + "px" });
     $("#seasoned").css({ 'top': (medHeight + workerHeight) - 5 + "px", 'left': leftMargin + "px" });
     $(".info_contain").css({ 'margin-top': windowHeight + "px" });
+    $(".contact_container").css({ 'top': 120 + "px", 'left': 70 + "px", 'width': 200 + "px" });
     //green
 }
 
@@ -112,6 +140,7 @@ function large(imgHeight, workerHeight, windowHeight) {
     $("#worker").css({ 'top': medHeight + "px", 'left': leftMargin + "px" });
     $("#seasoned").css({ 'top': (medHeight + workerHeight) - 5 + "px", 'left': leftMargin + "px" });
     $(".info_contain").css({ 'margin-top': windowHeight + "px" });
+    $(".contact_container").css({ 'top': 140 + "px", 'left': 90 + "px", 'width': 200 + "px" });
     //yellow
 }
 
@@ -124,6 +153,7 @@ function extraLarge(imgWidth, imgHeight, workerHeight, windowHeight) {
     $("#worker").css({ 'top': topSpacing + "px" });
     $("#seasoned").css({ 'top': topSpacing + workerHeight - 5 + "px" });
     $(".info_contain").css({ 'margin-top': windowHeight + "px" });
+    $(".contact_container").css({ 'top': 140 + "px", 'left': 180 + "px", 'width': 200 + "px" });
     //pink
 }
 
@@ -151,5 +181,4 @@ function launchSize() {
     var windowWidth = $(window).width();
     $("#launch").css({ "width": windowWidth + "px", "height": windowHeight + "px" });
 };
-
 
