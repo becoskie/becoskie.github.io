@@ -22,6 +22,7 @@ var newProject = {
     longDesc: "",
     buildItems: "",
     launchLink: "",
+    gitLink: "",
     dataLink: "",
     svgLink: "",
     imgLink: "",
@@ -75,6 +76,7 @@ $("#project_submit").on("click", function (event) {
         newProject.longDesc = $("#long_desc").val().trim();
         newProject.buildItems = $("#build_items").val().trim();
         newProject.launchLink = $("#launch_link").val().trim();
+        newProject.gitLink = $("#git_link").val().trim();
         newProject.dataLink = $("#data_link").val().trim();
         newProject.svgLink = $("#svg_link").val().trim();
         newProject.imgLink = $("#img_link").val().trim();
@@ -86,6 +88,7 @@ $("#project_submit").on("click", function (event) {
             longDesc: newProject.longDesc,
             buildItems: newProject.buildItems,
             launchLink: newProject.launchLink,
+            gitLink: newProject.gitLink,
             dataLink: newProject.dataLink,
             svgLink: newProject.svgLink,
             imgLink: newProject.imgLink,
@@ -100,6 +103,7 @@ $("#project_submit").on("click", function (event) {
         newProject.longDesc = $("#long_desc").val().trim();
         newProject.buildItems = $("#build_items").val().trim();
         newProject.launchLink = $("#launch_link").val().trim();
+        newProject.gitLink = $("#git_link").val().trim();
         newProject.dataLink = $("#data_link").val().trim();
         newProject.svgLink = $("#svg_link").val().trim();
         newProject.imgLink = $("#img_link").val().trim();
@@ -111,6 +115,7 @@ $("#project_submit").on("click", function (event) {
             longDesc: newProject.longDesc,
             buildItems: newProject.buildItems,
             launchLink: newProject.launchLink,
+            gitLink: newProject.gitLink,
             dataLink: newProject.dataLink,
             svgLink: newProject.svgLink,
             imgLink: newProject.imgLink,
@@ -155,6 +160,7 @@ $(document).on("click", ".proj_control", function (event) {
             $("#long_desc").val(data.val().longDesc);
             $("#build_items").val(data.val().buildItems);
             $("#launch_link").val(data.val().launchLink);
+            $("#git_link").val(data.val().gitLink);
             $("#data_link").val(data.val().dataLink);
             $("#svg_link").val(data.val().svgLink);
             $("#img_link").val(data.val().imgLink);
@@ -216,7 +222,10 @@ function limitToKey(keySent) {
                 $("#launch_heading").text(snapshot.val().projTitle);
                 $("#launch_short").text(snapshot.val().shortDesc);
                 $("#long_launch").html(snapshot.val().longDesc.replace(/.(?=[A-Z])/g, '<br />'));
-                $("#exit_btn").attr('data-target', snapshot.val().dataLink)
+                $("#exit_btn").attr('data-target', snapshot.val().dataLink);
+                $("#launch_img").attr('src', `assets/images/${snapshot.val().imgLink}`);
+                $('#launch_btn').attr('href', snapshot.val().launchLink);
+                $('#git_hub_project_link').attr('href', snapshot.val().gitLink);
                 var build = snapshot.val().buildItems.split(',');
                 var buildContain = $("#build_contain");
                 build.forEach( function(item) {
@@ -231,7 +240,4 @@ function limitToKey(keySent) {
     }
 
 }
-//need to launch
-// $('a#link_id').click(function() {
-//     $(this).attr('target', '_blank');
-// });
+

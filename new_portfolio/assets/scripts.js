@@ -1,4 +1,6 @@
 $(document).ready(function () {
+    var d = new Date();
+    var year = d.getFullYear();
     popCardData();
     limitToKey();
     $("#main").hide().fadeIn(1000);
@@ -47,6 +49,8 @@ $(document).ready(function () {
                 behavior: 'smooth'
             });
         });
+        $('#launch_btn').attr('href', "");
+        $('#git_project_link').attr('href', "");
         $("#main").delay(300).fadeIn(300);
     });
 
@@ -55,19 +59,19 @@ $(document).ready(function () {
         var link = $(this).attr('id');
         switch (link) {
             case 'git_link':
-            window.open('https://github.com/becoskie','_blank');
-            break;
+                window.open('https://github.com/becoskie', '_blank');
+                break;
             case 'lden_link':
-            window.open('https://www.linkedin.com/in/rbecoskie/','_blank');
-            break;
+                window.open('https://www.linkedin.com/in/rbecoskie/', '_blank');
+                break;
             case 'mail_link':
-            window.location.href = "mailto:ray@becoskie.com";
-            break;
-            
-            
+                window.location.href = "mailto:ray@becoskie.com";
+                break;
+
+
         }
     });
-
+    $("#cur_year").text(year);
 });
 
 //need to launch

@@ -1,1 +1,8 @@
-Random words are generated and the user receives number of chances to guess the word based on word length. If the input is correct a tile shows the correct letter, if the guess is wrong it gets removed from the alphabet and the user chances reduce by one. If the user fails to guess the word, the game wins and goes on to the next question leaving the word available for another round. If the user guesses correctly, the tiles change color and a song plays and adding one to the players score. 
+Random words are generated and the user receives number of chances to guess the word based on word length, tiles are populated also based on the words length. If the input is correct a tile shows the correct letter, if the guess is wrong it gets removed from the alphabet container, the user chances reduce by one and adding a win to Ken's score. If the user fails to guess the word, the game wins and goes on to the next question leaving the word available for another round. If the user guesses correctly, the word is removed from the data,the tiles change color, a song snippet plays and adding a win to the players score. 
+
+
+Classic trivia game.
+
+The user is presented with a random question along with four possible answers pulled from a json file,
+the user is given a set amount of time to answer the question.
+Once answerd the timer

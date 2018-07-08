@@ -106,6 +106,10 @@ body {
   .btn-center {
     text-align: center;
   }
+
+  a {
+      color:#2f3542;
+  }
 /* contact */
 /* --------------------------------------------------------------- */
 .contact_container {
@@ -128,24 +132,40 @@ body {
     margin-right: 1em;
 }
 
-#git_link .st0, #git_project_link .st0, #lden_link .st0, #mail_link .st0 {
+#git_link .st0, #lden_link .st0, #mail_link .st0 {
     fill:#2f3542;
 }
 
-#git_link .st1, #git_project_link .st1, #lden_link .st1, #mail_link .st1 {
+#git_link .st1, #lden_link .st1, #mail_link .st1 {
     fill: none;
     stroke: #2f3542;
     stroke-width: 4;
     stroke-miterlimit: 10;
 }
-
-#git_project_link {
-    vertical-align: middle;
-    max-width:2.5rem;
-    margin-right:.25em;
+#git_hub_img .st0 {
+    fill:#2f3542;
 }
 
-#git_project_link .st1 {stroke-width: 6;}
+#git_hub_img .st0:hover {
+    fill:#999999;
+}
+
+#git_hub_project_link  {
+    text-decoration: none;
+}
+
+#git_hub_img {
+    width:2.5rem;
+    vertical-align: middle;
+}
+
+.footer {
+    margin-bottom: 5rem;
+    font-size: .75em;
+}
+
+
+
 /* end contact */
 /* --------------------------------------------------------------- */
 
@@ -193,6 +213,7 @@ br {
 #launch_img {
     max-width: 100%;
 }
+
 /* end launch page */
 /* --------------------------------------------------------------- */
 /* project form */
