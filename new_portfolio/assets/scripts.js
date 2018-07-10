@@ -106,6 +106,9 @@ function extraSmall(imgWidth, imgHeight, workerHeight, windowHeight) {
     $("#worker").css({ 'top': headingMath + mgTop + "px" });
     $("#seasoned").css({ 'top': (headingMath + mgTop) + (workerHeight - 5) + "px" });
     $(".info_contain").css({ 'margin-top': windowHeight + "px" });
+    $(".footer-standard").css({ 'display': "none" });
+    $(".footer-mobile").css({ 'display': "block" });
+    
     //red
 }
 
@@ -119,6 +122,8 @@ function small(imgHeight, workerHeight, windowHeight) {
     $("#seasoned").css({ 'top': (medHeight + workerHeight) - 5 + "px", 'left': leftMargin + "px" });
     $(".info_contain").css({ 'margin-top': windowHeight + "px" });
     $(".contact_container").css({ 'top': 100 + "px", 'left': 50 + "px", 'width': 200 + "px" });
+    $(".footer-standard").css({ 'display': "block" });
+    $(".footer-mobile").css({ 'display': "none" });
     //blue
 }
 
@@ -132,6 +137,8 @@ function medium(imgHeight, workerHeight, windowHeight) {
     $("#seasoned").css({ 'top': (medHeight + workerHeight) - 5 + "px", 'left': leftMargin + "px" });
     $(".info_contain").css({ 'margin-top': windowHeight + "px" });
     $(".contact_container").css({ 'top': 120 + "px", 'left': 70 + "px", 'width': 200 + "px" });
+    $(".footer-standard").css({ 'display': "block" });
+    $(".footer-mobile").css({ 'display': "none" });
     //green
 }
 
@@ -145,6 +152,8 @@ function large(imgHeight, workerHeight, windowHeight) {
     $("#seasoned").css({ 'top': (medHeight + workerHeight) - 5 + "px", 'left': leftMargin + "px" });
     $(".info_contain").css({ 'margin-top': windowHeight + "px" });
     $(".contact_container").css({ 'top': 140 + "px", 'left': 90 + "px", 'width': 200 + "px" });
+    $(".footer-standard").css({ 'display': "block" });
+    $(".footer-mobile").css({ 'display': "none" });
     //yellow
 }
 
@@ -158,6 +167,8 @@ function extraLarge(imgWidth, imgHeight, workerHeight, windowHeight) {
     $("#seasoned").css({ 'top': topSpacing + workerHeight - 5 + "px" });
     $(".info_contain").css({ 'margin-top': windowHeight + "px" });
     $(".contact_container").css({ 'top': 140 + "px", 'left': 180 + "px", 'width': 200 + "px" });
+    $(".footer-standard").css({ 'display': "block" });
+    $(".footer-mobile").css({ 'display': "none" });
     //pink
 }
 

@@ -159,7 +159,7 @@ body {
     vertical-align: middle;
 }
 
-.footer {
+.footer-standard, .footer-mobile {
     margin-bottom: 5rem;
     font-size: .75em;
 }
