@@ -2,53 +2,28 @@ require("dotenv").config();
 var keys = require("./keys.js");
 var inquirer = require("inquirer");
 var Twitter = require("twitter");
-//var spotify = new Spotify(keys.spotify);
+var Spotify = require('node-spotify-api');
+var spotify = new Spotify(keys.spotify);
+var userChoice = process.argv.slice(2);
+var option = userChoice.shift();
+var query = userChoice.toString().replace(/,/g, ' ');
 var filename = './logFile.txt';
 var log = require('simple-node-logger').createSimpleFileLogger(filename);
 log.setLevel('all');
 
-menu();
-
-
-function menu() {
-    inquirer
-        .prompt([
-            {
-                type: "list",
-                message: "What would you like to search?",
-                choices: ["Twitter", "Spotify", "Look for a Movie"],
-                name: "liri_choice"
-            },
-            {
-                type: "confirm",
-                message: "Are you sure:",
-                name: "search_item",
-                default: true
-            },
-
-        ])
-        .then(function (inquirerResponse) {
-
-            if (inquirerResponse.search_item) {
-                getSearchChoice(inquirerResponse.liri_choice);
-            }
-            else {
-                console.log("Sorry I only can help with those choices");
-            }
-
-        });
+if(userChoice) {
+    getSearchChoice(option)
 }
-
 
 function getSearchChoice(choice) {
     switch (choice) {
-        case "Twitter":
+        case "my-tweets":
             getTwitter();
             break;
-        case "Spotify":
+        case "spotify-this-song":
             getSpotify();
             break;
-        case "Look for a Movie":
+        case "movie-this":
             getMovie();
             break;
     }
@@ -75,9 +50,36 @@ function getSpotify() {
             {
                 type: "input",
                 message: "What song do you want to look up?",
-                name: "username"
+                name: "songTitle"
+            },
+            {
+                type: "confirm",
+                message: "Are you sure:",
+                name: "search_song",
+                default: true
             }
         ])
+        .then(function (inquirerResponse) {
+
+            if (inquirerResponse.search_song) {
+                var song_query = inquirerResponse.songTitle;
+                spotify.search({ type: 'track', query: song_query, limit: 5}, function (err, data) {
+                    if (err) {
+                        return console.log('Error occurred: ' + err);
+                    }
+                    var name = [];
+                    name.push(data.tracks.items[1].album.artists[1].name);
+                    var nameString = name.join(", ");
+
+                    logItem(nameString);
+                    //console.log(data.tracks.items[0].album.artists);
+                });
+            }
+            else {
+                logItem(error);
+            }
+
+        });
 }
 
 function getMovie() {
