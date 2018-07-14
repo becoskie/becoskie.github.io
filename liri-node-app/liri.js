@@ -1,10 +1,11 @@
 require("dotenv").config();
+var keys = require("./keys.js");
 var inquirer = require("inquirer");
+var Twitter = require("twitter");
 //var spotify = new Spotify(keys.spotify);
-//var client = new Twitter(keys.twitter);
-var tweets;
-var song;
-var movie;
+var filename = './logFile.txt';
+var log = require('simple-node-logger').createSimpleFileLogger(filename);
+log.setLevel('all');
 
 menu();
 
@@ -54,16 +55,37 @@ function getSearchChoice(choice) {
 }
 
 function getTwitter() {
-    console.log("It's twitter");
-    menu();
+    var client = new Twitter(keys.twitter);
+    client.get('statuses/user_timeline', { screen_name: "Margret Twain", count: 20 }, function (error, tweets, response) {
+        if (!error) {
+            tweets.forEach(function (item) {
+                logItem("Tweet: " + item.text);
+                logItem("Tweet Date: " + item.created_at);
+            })
+
+        } else {
+            logItem(error);
+        }
+    });
 }
 
 function getSpotify() {
-    console.log("It's Spotify");
-    menu();
+    inquirer
+        .prompt([
+            {
+                type: "input",
+                message: "What song do you want to look up?",
+                name: "username"
+            }
+        ])
 }
 
 function getMovie() {
     console.log("It's movie");
     menu();
+}
+
+function logItem(textItem) {
+    log.info(textItem);
+    console.log(textItem);
 }
