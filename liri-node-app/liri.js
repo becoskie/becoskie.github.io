@@ -1,6 +1,5 @@
 require("dotenv").config();
 var keys = require("./keys.js");
-var inquirer = require("inquirer");
 var Twitter = require("twitter");
 var Spotify = require('node-spotify-api');
 var request = require("request");
@@ -113,23 +112,13 @@ function getMovie(query) {
 }
 
 function doWhatItSays() {
-
     fs.readFile("random.txt", "utf8", function (err, data) {
         if (err) {
             logOutput.error(err);
         } else {
-
-            // Creates array with data.
-            var randomArray = data.split(",");
-
-            // Sets action to first item in array.
-            action = randomArray[0];
-
-            // Sets optional third argument to second item in array.
-            argument = randomArray[1];
-
-            // Calls main controller to do something based on action and argument.
-            doSomething(action, argument);
+            var dataArr = data.split(",");
+            query = dataArr[1].replace(/"/g, '');
+            getSearchChoice(dataArr[0]);
         }
     });
 }
