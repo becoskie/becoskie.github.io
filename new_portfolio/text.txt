@@ -1,8 +1,109 @@
-Random words are generated and the user receives number of chances to guess the word based on word length, tiles are populated also based on the words length. If the input is correct a tile shows the correct letter, if the guess is wrong it gets removed from the alphabet container, the user chances reduce by one and adding a win to Ken's score. If the user fails to guess the word, the game wins and goes on to the next question leaving the word available for another round. If the user guesses correctly, the word is removed from the data,the tiles change color, a song snippet plays and adding a win to the players score. 
+Descriptions and items used for add project page.
 
+
+
+Ken and Ken's Colors
+
+Interactive word guess game.
+
+Random words are generated and the user receives a number of chances to guess the word based on word length, shown by tiles. If the input is correct a tile shows the correct letter, if the guess is wrong it gets removed from the alphabet container, the user's chances are reduced by one and the game wins a point. If the user fails to guess the word, the game wins and goes on to the next question, leaving the word available for another round. If the user guesses correctly, the word is removed from the data, the tiles change color, a song snippet plays and a win is added to the player's score.
+
+javascript,json,bootstrap,html,css,Ken Nordine's Colors
+
+https://becoskie.github.io/Portfolio/word_guess_game/index.html
+
+https://github.com/becoskie/becoskie.github.io/tree/master/word_guess_game
+
+ken
+
+ken.svg
+
+ken.jpg
+
+webdev
+
+
+
+
+
+Trouser Pantsky
 
 Classic trivia game.
 
 The user is presented with a random question along with four possible answers pulled from a json file,
-the user is given a set amount of time to answer the question.
-Once answerd the timer
+and given a set amount of time to answer.
+Once answered, the timer stops, reveals the answer and proceeds to the next question, removing the previous question from the datafile.
+If the user is correct, a win is added, if incorrect or out of time, then it is recorded as a loss.
+After ten rounds the user is shown their score and given an opportunity to play some more.
+
+Javascript,html,css,bootstrap,json
+
+https://becoskie.github.io/TriviaGame/index.html
+
+https://github.com/becoskie/becoskie.github.io/tree/master/TriviaGame
+
+trouser
+
+trouser.svg
+
+trouser.jpeg
+
+webdev
+
+
+Things I Should Brake For...
+
+API Driven app.
+
+An interactive app deriving images through an api. Not only can the user choose from pre-populated choices, they also have the ability to create their own. Using a submit form the user can create their own gallery of items they want to see. Once the user enters an item, a button is created from their request. The gallery will hold items taken from the giphy api, with the choice to see the animated giph, the still image giph, and the ability to download the giph.
+
+API Request,Javascript,AJAX,html,css,bootstrap
+
+https://becoskie.github.io/gifTastic/index.html
+
+https://github.com/becoskie/becoskie.github.io/tree/master/gifTastic
+
+brake
+
+brake.svg
+
+brake.jpeg
+
+
+Development Portfolio
+
+Firebase Driven site.
+
+Created a content management system using firebase as the database including a fully functioning add, edit and delete system used to dynamically create content for the site. 
+This makes it simple and efficient to add new content, correct mistakes continually being made as well as getting rid of projects that don't feel that fresh anymore.
+
+Javascript,Jquery,Firebase,html,css,bootstrap
+
+#
+
+#
+
+portfolio
+
+portfolio.svg
+
+portfolio_1.svg
+
+
+Liri App 
+
+A command line node app.
+
+LIRI is a command line node app that takes in parameters and gives you back data using node packages and sending requests to Twitter, Spotify and OMDB APIs to retrieve data to power the app. The creation of a package json allows other users to easily install the app, building a file structure to allow the user to supply their own tokens and secrets needed to retrieve the data. From the command line the user is able to receive tweets, search a song, search a movie, or use a text file to dive the app. Also, there is a logger to log all the requests taking place. Good job liri.
+
+node,Javascript,spotify package,twitter package,dotenv package,request package, simple node logger
+
+https://github.com/becoskie/becoskie.github.io/tree/3d594465f512967356084556608dad7c7785b3ca/liri-node-app
+
+https://github.com/becoskie/becoskie.github.io/tree/3d594465f512967356084556608dad7c7785b3ca/liri-node-app
+
+liri
+
+liri.svg
+
+liri.jpg
