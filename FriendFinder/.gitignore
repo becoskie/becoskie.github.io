@@ -1,0 +1,5 @@
+node_modules
+.DS_STORE
+.env
+snips.js
+testing.js
