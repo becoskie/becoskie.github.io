@@ -1,0 +1,50 @@
+[
+    {
+    "id": 1,
+    "image": "best_ever.jpg"
+    },
+    {
+    "id": 2,
+    "image": "blue_beret.jpg"
+    },
+    {
+    "id": 3,
+    "image": "fur.jpg"
+    },
+    {
+    "id": 4,
+    "image": "necklaces.jpg"
+    },
+    {
+    "id": 5,
+    "image": "orange_dress.jpg"
+    },
+    {
+    "id": 6,
+    "image": "purple_dress.jpg"
+    },
+    {
+    "id": 7,
+    "image": "red_dress.jpg"
+    },
+    {
+    "id": 8,
+    "image": "red_jacket.jpg"
+    },
+    {
+    "id": 9,
+    "image": "red_scarf.jpg"
+    },
+    {
+    "id": 10,
+    "image": "teal_jumpsuit.jpg"
+    },
+    {
+    "id": 11,
+    "image": "tweed.jpg"
+    },
+    {
+    "id": 12,
+    "image": "yellow_pantsuit.jpg"
+    }
+    ]
