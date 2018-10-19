@@ -1,30 +1,19 @@
-# New York Times Article Search
+# Ken and Ken's Colors
 
-A React.js app that allows users to search for articles in the New York Times. After searching a topic, the app displays the related articles with a save option, sending the relevent data to the database to be retrieved when visiting the saved page. The users are able to delete the articles from the saved page. If there are no articles associated with the topic, a message is diplayed informing the user that there are no articles related to the topic. The app uses Node/Express for the server and routing, MongoDB/Mongoose for the database and React on the client side.
+Random words are generated and the user receives a number of chances to guess the word based on word length, shown by tiles. If the input is correct a tile shows the correct letter, if the guess is wrong it gets removed from the alphabet container, the user's chances are reduced by one and the game wins a point. If the user fails to guess the word, the game wins and goes on to the next question, leaving the word available for another round. If the user guesses correctly, the word is removed from the data, the tiles change color, a song snippet plays and a win is added to the player's score.
 
-[Live Link](https://becoskie-nyt.herokuapp.com/)
+[Live Link](https://becoskie.github.io/Portfolio/word_guess_game/index.html)
 
 
 ### The Build
 
 
-1. express
-2. mongoose
-3. body-parser
-4. axios
-5. moment
-6. react
-7. react-dom
-8. react-router-dom
-9. react-scripts
-
-
-
-Run the following from the root  *and* from the Client folder:
-
-```
-yarn install
-```
+1. Vanilla Javascript
+2. Json
+3. Bootstrap
+4. HTML
+5. CSS
+6. Ken Nordine's Colors
 
 
 ## Screenshots
@@ -33,5 +22,10 @@ yarn install
 
 ![screenshot-1](assets/images/ken_screen.png)
 
-### You know what goes good with the NY Times? 
+## Acknowledgments
+1. Ken Nordine for inspiration
+2. Whoever wrote the sweet code to itterate through a word like 'scissors' finding all the occurrences
+3. The person I pinched the graphic from. It's on the internet somewhere.
+
+### Brown... that's a good color. 
 <a class="bmc-button" target="_blank" href="https://www.buymeacoffee.com/mwFGJN9bZ"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy me a coffee"></a>
