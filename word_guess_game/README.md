@@ -18,9 +18,16 @@ Random words are generated and the user receives a number of chances to guess th
 
 ## Screenshots
 
-**Article search and results**
+**Ken in action**
 
 ![screenshot-1](assets/images/ken_screen.png)
+
+## Code
+```
+for(var i=0; i<wordItem.length;i++) {
+          if (wordItem[i] === userGuess) { 
+            occurrences.push(i);
+```
 
 ## Acknowledgments
 1. Ken Nordine for inspiration
