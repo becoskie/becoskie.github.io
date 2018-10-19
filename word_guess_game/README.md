@@ -27,6 +27,8 @@ Random words are generated and the user receives a number of chances to guess th
 for(var i=0; i<wordItem.length;i++) {
           if (wordItem[i] === userGuess) { 
             occurrences.push(i);
+          }
+}
 ```
 
 ## Acknowledgments
